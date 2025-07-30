@@ -171,9 +171,9 @@ ${formData.comentarios || "Ninguno"}
                   <SelectValue placeholder="Selecciona una habitación" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="individual">Habitación Individual - $25/noche</SelectItem>
-                  <SelectItem value="doble">Habitación Doble - $40/noche</SelectItem>
-                  <SelectItem value="matrimonial">Habitación Matrimonial - $45/noche</SelectItem>
+                  <SelectItem value="individual">Habitación Individual - $25.000/noche</SelectItem>
+                  <SelectItem value="doble">Habitación Doble - $40.000/noche</SelectItem>
+                  <SelectItem value="matrimonial">Habitación Matrimonial - $45.000/noche</SelectItem>
                 </SelectContent>
               </Select>
             </div>

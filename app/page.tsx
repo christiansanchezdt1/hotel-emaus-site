@@ -129,12 +129,12 @@ export default function Home() {
                       Hotel Casa de Emaús - Tu Hogar en Salta
                     </h2>
                     <p className={`text-gray-700 mb-6 leading-relaxed ${isMobile ? "text-base" : "text-lg"}`}>
-                      Bienvenido al mejor <strong>hotel en Salta capital</strong>. El Hotel Casa de Emaús te ofrece una
+                      Bienvenido al mejor <strong>hotel / posada en Salta capital</strong>. El Hotel Casa de Emaús te ofrece una
                       experiencia única con instalaciones cómodas y un ambiente acogedor. Nuestro hermoso comedor con
                       techo de cristal, lobby confortable y jardín interior te harán sentir como en casa.
                     </p>
                     <p className={`text-gray-700 mb-6 leading-relaxed ${isMobile ? "text-base" : "text-lg"}`}>
-                      Como <strong>motel en Salta</strong> de confianza, ofrecemos{" "}
+                      Como <strong>Hotel en Salta</strong> de confianza, ofrecemos{" "}
                       <strong>habitaciones baratas en Salta capital</strong>
                       sin comprometer la calidad. Somos la mejor opción para{" "}
                       <strong>alquiler temporario en el centro de Salta</strong>.
@@ -436,7 +436,7 @@ export default function Home() {
                     <p>🅿️ Estacionamiento gratuito</p>
                     <p>📶 WiFi gratis en todo el hotel</p>
                     <p className="text-sm text-gray-400 mt-4">
-                      <strong>Motel en Salta</strong> con todos los servicios
+                      <strong>Hotel en Salta</strong> con todos los servicios
                     </p>
                   </div>
                 </div>

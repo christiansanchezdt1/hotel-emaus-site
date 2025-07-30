@@ -46,7 +46,7 @@ export function SEOContent() {
                   <h2 className="text-xl font-bold text-red-700">Habitaciones Baratas</h2>
                 </div>
                 <p className="text-gray-700 leading-relaxed">
-                  Ofrecemos las mejores <strong>habitaciones baratas en Salta capital</strong> desde $25 por noche.
+                  Ofrecemos las mejores <strong>habitaciones baratas en Salta capital</strong> desde $25.000 por noche.
                   Ideal para quienes buscan <strong>rentar habitaciones en Salta capital</strong> a precios accesibles
                   sin sacrificar comodidad.
                 </p>
@@ -59,10 +59,10 @@ export function SEOContent() {
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <Shield className="h-8 w-8 text-green-600" />
-                  <h2 className="text-xl font-bold text-red-700">Motel Seguro</h2>
+                  <h2 className="text-xl font-bold text-red-700">Hotel Seguro</h2>
                 </div>
                 <p className="text-gray-700 leading-relaxed">
-                  Como <strong>motel en Salta</strong> de confianza, garantizamos seguridad 24 horas, limpieza impecable
+                  Como <strong>Hotel en Salta</strong> de confianza, garantizamos seguridad 24 horas, limpieza impecable
                   y atención personalizada. El mejor <strong>hospedaje en Salta</strong>
                   para viajeros de negocios y turismo.
                 </p>
@@ -123,23 +123,23 @@ export function SEOContent() {
 
                 <div className="space-y-4">
                   <div className="bg-amber-50 p-4 rounded-lg border border-amber-200">
-                    <h4 className="font-semibold text-amber-800 mb-2">Habitación Individual - $25/noche</h4>
+                    <h4 className="font-semibold text-amber-800 mb-2">Habitación Individual - $25.000/noche</h4>
                     <p className="text-sm text-amber-700">
                       Perfecta para viajeros solos que buscan <strong>habitaciones baratas en Salta capital</strong>
                     </p>
                   </div>
 
                   <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-                    <h4 className="font-semibold text-blue-800 mb-2">Habitación Doble - $40/noche</h4>
+                    <h4 className="font-semibold text-blue-800 mb-2">Habitación Doble - $40.000/noche</h4>
                     <p className="text-sm text-blue-700">
                       Ideal para amigos o compañeros de trabajo en <strong>alquiler temporario centro Salta</strong>
                     </p>
                   </div>
 
                   <div className="bg-pink-50 p-4 rounded-lg border border-pink-200">
-                    <h4 className="font-semibold text-pink-800 mb-2">Habitación Matrimonial - $45/noche</h4>
+                    <h4 className="font-semibold text-pink-800 mb-2">Habitación Matrimonial - $45.000/noche</h4>
                     <p className="text-sm text-pink-700">
-                      Romántica habitación para parejas en nuestro <strong>motel en Salta</strong>
+                      Romántica habitación para parejas en nuestro <strong>Hotel en Salta</strong>
                     </p>
                   </div>
                 </div>
@@ -225,8 +225,8 @@ export function SEOContent() {
                 <CardContent className="p-6">
                   <h3 className="font-bold text-red-600 mb-3">¿Cuáles son las tarifas del hotel en Salta?</h3>
                   <p className="text-gray-700">
-                    Nuestras <strong>habitaciones baratas en Salta capital</strong> van desde $25 por noche para
-                    habitaciones individuales, $40 para dobles y $45 para matrimoniales. Somos el{" "}
+                    Nuestras <strong>habitaciones baratas en Salta capital</strong> van desde $25.000 por noche para
+                    habitaciones individuales, $40.000 para dobles y $45.000 para matrimoniales. Somos el{" "}
                     <strong>hotel más económico en Salta centro</strong>.
                   </p>
                 </CardContent>

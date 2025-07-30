@@ -23,7 +23,7 @@ const rooms: Room[] = [
     id: "individual",
     name: "Habitación Individual",
     description: "Perfecta para viajeros solos que buscan comodidad y tranquilidad.",
-    price: 25,
+    price: 25000,
     capacity: 1,
     images: ["/images/habitacion-simple-1.jpg"],
     amenities: ["WiFi Gratuito", "Ventilador de Techo", "TV", "Baño Privado"],
@@ -33,7 +33,7 @@ const rooms: Room[] = [
     id: "doble",
     name: "Habitación Doble",
     description: "Ideal para amigos o compañeros de viaje con dos camas individuales.",
-    price: 40,
+    price: 40000,
     capacity: 2,
     images: ["/images/habitacion-doble-1.jpg", "/images/habitacion-doble-2.jpg", "/images/habitacion-doble-3.jpg"],
     amenities: ["WiFi Gratuito", "Ventilador de Techo", "TV", "Baño Privado"],
@@ -43,7 +43,7 @@ const rooms: Room[] = [
     id: "matrimonial",
     name: "Habitación Matrimonial",
     description: "Romántica habitación con cama matrimonial para parejas.",
-    price: 45,
+    price: 45000,
     capacity: 2,
     images: ["/images/habitacion-doble-matrimonial-1.jpg"],
     amenities: ["WiFi Gratuito", "Ventilador de Techo", "TV", "Baño Privado"],
@@ -72,7 +72,7 @@ export function RoomsSection() {
 
 🏨 *Habitación solicitada:*
 • ${room.name}
-• Precio: $${room.price} por noche
+• Precio: ${room.price}$ por noche
 • Capacidad: ${room.capacity} ${room.capacity === 1 ? "huésped" : "huéspedes"}
 
 📋 *Descripción:*
@@ -112,7 +112,7 @@ ${room.features.map((feature) => `• ${feature}`).join("\n")}
             >
               <div className="relative h-48">
                 <Image src={room.images[0] || "/placeholder.svg"} alt={room.name} fill className="object-cover" />
-                <Badge className="absolute top-2 right-2 bg-red-600 text-white shadow-lg">${room.price}/noche</Badge>
+                <Badge className="absolute top-2 right-2 bg-red-600 text-white shadow-lg">{room.price}$/noche</Badge>
               </div>
 
               <CardHeader>
@@ -261,7 +261,7 @@ ${room.features.map((feature) => `• ${feature}`).join("\n")}
                       <Users className="h-5 w-5 text-red-600" />
                       <span>Hasta {selectedRoom.capacity} huéspedes</span>
                     </div>
-                    <div className="text-2xl font-bold text-red-600">${selectedRoom.price}/noche</div>
+                    <div className="text-2xl font-bold text-red-600">{selectedRoom.price}$/noche</div>
                   </div>
                 </div>
 

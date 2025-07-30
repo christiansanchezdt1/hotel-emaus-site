@@ -1,26 +1,419 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Colores inspirados en Hotel Casa de Emaús */
+    --background: 45 15% 97%; /* Beige muy claro, como las paredes */
+    --foreground: 25 25% 15%; /* Marrón oscuro para texto */
+    --card: 0 0% 100%; /* Blanco puro para tarjetas */
+    --card-foreground: 25 25% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 25% 15%;
+    --primary: 0 65% 45%; /* Rojo burgundy como los manteles */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 35 25% 85%; /* Beige claro */
+    --secondary-foreground: 25 25% 15%;
+    --muted: 35 20% 90%; /* Beige muy claro */
+    --muted-foreground: 25 15% 45%;
+    --accent: 25 35% 75%; /* Marrón claro como la madera */
+    --accent-foreground: 25 25% 15%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 35 20% 85%; /* Bordes beige suave */
+    --input: 35 20% 92%; /* Inputs con fondo beige muy claro */
+    --ring: 0 65% 45%; /* Ring color rojo como primary */
+    --radius: 0.5rem;
+
+    /* Colores personalizados del hotel */
+    --hotel-red: 0 65% 45%; /* Rojo de los manteles */
+    --hotel-beige: 35 25% 85%; /* Beige de las paredes */
+    --hotel-brown: 25 35% 35%; /* Marrón de la madera */
+    --hotel-cream: 45 30% 92%; /* Crema claro */
+    --hotel-green: 120 25% 35%; /* Verde de las plantas */
+  }
+
+  .dark {
+    --background: 25 25% 8%;
+    --foreground: 35 15% 92%;
+    --card: 25 25% 10%;
+    --card-foreground: 35 15% 92%;
+    --popover: 25 25% 10%;
+    --popover-foreground: 35 15% 92%;
+    --primary: 0 65% 55%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 25 20% 15%;
+    --secondary-foreground: 35 15% 92%;
+    --muted: 25 20% 15%;
+    --muted-foreground: 35 10% 65%;
+    --accent: 25 20% 20%;
+    --accent-foreground: 35 15% 92%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 25 20% 20%;
+    --input: 25 20% 15%;
+    --ring: 0 65% 55%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+  }
+}
+
+/* Clases personalizadas para el hotel */
+@layer components {
+  /* Asegurar que las secciones tengan el stacking context correcto */
+  .section-container {
+    position: relative;
+    z-index: 20;
+    background: white;
+  }
+
+  /* Header con z-index alto */
+  .header-fixed {
+    z-index: 100;
+  }
+
+  /* Hero section con z-index base */
+  .hero-section {
+    z-index: 10;
+  }
+
+  /* Parallax optimizado para evitar problemas de layering */
+  .parallax {
+    transform: translateY(var(--scroll-y, 0));
+    will-change: transform;
+  }
+
+  /* Evitar problemas de z-index en dispositivos táctiles */
+  @media (hover: none) {
+    .parallax {
+      transform: none !important;
+      will-change: auto;
+    }
+  }
+
+  /* Asegurar que el contenido principal esté por encima del hero */
+  .main-content {
+    position: relative;
+    z-index: 20;
+    background: white;
+  }
+
+  /* Slider con z-index controlado */
+  .image-slider {
+    position: relative;
+    z-index: 10;
+  }
+
+  /* Controles del slider con z-index alto */
+  .slider-controls {
+    z-index: 30;
+  }
+  .hotel-gradient {
+    @apply bg-gradient-to-br from-amber-50 to-orange-50;
+  }
+
+  .hotel-card {
+    @apply bg-white border border-amber-200 shadow-lg;
+    background: linear-gradient(145deg, #ffffff 0%, #fefce8 100%);
+  }
+
+  .hotel-button-primary {
+    @apply bg-red-600 hover:bg-red-700 text-white transition-all duration-200;
+    background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+  }
+
+  /* Hover effects optimizados para touch */
+  @media (hover: hover) {
+    .hotel-button-primary:hover {
+      @apply scale-105;
+    }
+  }
+
+  .hotel-button-secondary {
+    @apply bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 transition-all duration-200;
+  }
+
+  .hotel-text-primary {
+    @apply text-red-700;
+  }
+
+  .hotel-text-secondary {
+    @apply text-amber-800;
+  }
+
+  /* Animaciones optimizadas para dispositivos táctiles */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-left {
+    animation: fadeInLeft 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-right {
+    animation: fadeInRight 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  .animate-slide-in-bottom {
+    animation: slideInBottom 0.6s ease-out forwards;
+  }
+
+  /* Estados iniciales para las animaciones - reducidos en móviles */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .animate-on-scroll-left {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  .animate-on-scroll-right {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  .animate-on-scroll-scale {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  .animate-on-scroll-bottom {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  /* Animaciones con delay reducidos para móviles */
+  .animate-delay-100 {
+    animation-delay: 0.05s;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 0.1s;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 0.15s;
+  }
+
+  .animate-delay-400 {
+    animation-delay: 0.2s;
+  }
+
+  .animate-delay-500 {
+    animation-delay: 0.25s;
+  }
+
+  /* Elementos táctiles más grandes */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Mejores áreas de toque para botones */
+  .touch-button {
+    @apply touch-target relative;
+  }
+
+  .touch-button::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    z-index: -1;
+  }
+}
+
+/* Reglas específicas para evitar problemas de superposición */
+.hero-section {
+  position: relative;
+  z-index: 10;
+}
+
+.content-section {
+  position: relative;
+  z-index: 20;
+  background: white;
+}
+
+/* Asegurar que el WhatsApp float esté siempre visible */
+.whatsapp-float {
+  z-index: 90;
+}
+
+/* Keyframes optimizados para móviles */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animación para el header al hacer scroll */
+.header-scrolled {
+  @apply bg-white/95 backdrop-blur-md shadow-lg;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-scrolled h1 {
+  @apply text-red-700;
+}
+
+.header-scrolled p {
+  @apply text-amber-700;
+}
+
+.header-scrolled nav a {
+  @apply text-gray-700 hover:text-red-600;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Parallax effect - deshabilitado en dispositivos táctiles */
+@media (hover: hover) {
+  .parallax {
+    transform: translateY(var(--scroll-y, 0));
+  }
+}
+
+/* Optimizaciones para dispositivos táctiles */
+@media (hover: none) {
+  /* Desactivar hover effects en dispositivos táctiles */
+  .hover\:scale-105:hover {
+    transform: none;
+  }
+
+  /* Reducir animaciones complejas */
+  .animate-on-scroll,
+  .animate-on-scroll-left,
+  .animate-on-scroll-right,
+  .animate-on-scroll-scale,
+  .animate-on-scroll-bottom {
+    transform: none;
+  }
+
+  /* Simplificar transiciones */
+  * {
+    animation-duration: 0.3s !important;
+  }
+}
+
+/* Respetar preferencias de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .parallax {
+    transform: none !important;
+  }
+}
+
+/* Mejoras para pantallas pequeñas */
+@media (max-width: 768px) {
+  /* Reducir transforms para mejor rendimiento */
+  .animate-on-scroll {
+    transform: translateY(10px);
+  }
+
+  .animate-on-scroll-left,
+  .animate-on-scroll-right {
+    transform: translateX(0);
+  }
+
+  /* Botones más grandes para touch */
+  .touch-button {
+    @apply px-6 py-4 text-base;
+  }
+
+  /* Espaciado mejorado para touch */
+  .touch-spacing {
+    @apply space-y-4;
+  }
 }

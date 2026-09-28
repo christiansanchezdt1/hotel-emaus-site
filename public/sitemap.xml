@@ -2,45 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
-  <!-- Página principal -->
+  <!-- El sitio es una sola página: habitaciones, reservas y contacto son secciones (#anclas) de "/" -->
   <url>
     <loc>https://hotelcasadeemaus.com/</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://hotelcasadeemaus.com/images/fachada.jpg</image:loc>
       <image:caption>Hotel Casa de Emaús - Fachada principal en Salta Capital</image:caption>
       <image:title>Hotel en Salta Capital - Casa de Emaús</image:title>
     </image:image>
-  </url>
-
-  <!-- Página de habitaciones -->
-  <url>
-    <loc>https://hotelcasadeemaus.com/habitaciones</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
     <image:image>
       <image:loc>https://hotelcasadeemaus.com/images/habitacion-doble-1.jpg</image:loc>
       <image:caption>Habitaciones baratas en Salta capital</image:caption>
     </image:image>
-  </url>
-
-  <!-- Página de contacto -->
-  <url>
-    <loc>https://hotelcasadeemaus.com/contacto</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Página de reservas -->
-  <url>
-    <loc>https://hotelcasadeemaus.com/reservas</loc>
-    <lastmod>2024-01-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://hotelcasadeemaus.com/images/recepcion.jpg</image:loc>
+      <image:caption>Recepción del Hotel Casa de Emaús</image:caption>
+    </image:image>
   </url>
 
 </urlset>

@@ -25,7 +25,7 @@ const rooms: Room[] = [
     description: "Perfecta para viajeros solos que buscan comodidad y tranquilidad.",
     price: 25000,
     capacity: 1,
-    images: ["/images/habitacion-simple-1.jpg"],
+    images: ["/images/habitacion-simple-1.webp"],
     amenities: ["WiFi Gratuito", "Ventilador de Techo", "TV", "Baño Privado"],
     features: ["Cama individual", "Mesa de noche", "Armario", "Calefacción"],
   },
@@ -35,7 +35,7 @@ const rooms: Room[] = [
     description: "Ideal para amigos o compañeros de viaje con dos camas individuales.",
     price: 40000,
     capacity: 2,
-    images: ["/images/habitacion-doble-1.jpg", "/images/habitacion-doble-2.jpg", "/images/habitacion-doble-3.jpg"],
+    images: ["/images/habitacion-doble-1.webp", "/images/habitacion-doble-2.webp", "/images/habitacion-doble-3.webp"],
     amenities: ["WiFi Gratuito", "Ventilador de Techo", "TV", "Baño Privado"],
     features: ["Dos camas individuales", "Armario empotrado", "Mesas de noche", "Calefacción"],
   },
@@ -45,7 +45,7 @@ const rooms: Room[] = [
     description: "Romántica habitación con cama matrimonial para parejas.",
     price: 45000,
     capacity: 2,
-    images: ["/images/habitacion-doble-matrimonial-1.jpg"],
+    images: ["/images/habitacion-doble-matrimonial-1.webp"],
     amenities: ["WiFi Gratuito", "Ventilador de Techo", "TV", "Baño Privado"],
     features: ["Cama matrimonial", "Decoración especial", "Mesa de noche", "Calefacción"],
   },
@@ -180,7 +180,7 @@ ${room.features.map((feature) => `• ${feature}`).join("\n")}
           <Card>
             <CardContent className="p-6 text-center">
               <div className="relative h-32 mb-4 rounded-lg overflow-hidden">
-                <Image src="/images/pasillo-hotel.jpg" alt="Pasillos del hotel" fill className="object-cover" />
+                <Image src="/images/pasillo-hotel.webp" alt="Pasillos del hotel" fill className="object-cover" />
               </div>
               <h3 className="font-semibold mb-2">Pasillos Iluminados</h3>
               <p className="text-sm text-gray-600">Hermosos pasillos con techo de cristal y decoración natural</p>
@@ -190,7 +190,7 @@ ${room.features.map((feature) => `• ${feature}`).join("\n")}
           <Card>
             <CardContent className="p-6 text-center">
               <div className="relative h-32 mb-4 rounded-lg overflow-hidden">
-                <Image src="/images/bano-1.jpg" alt="Baños completos" fill className="object-cover" />
+                <Image src="/images/bano-1.webp" alt="Baños completos" fill className="object-cover" />
               </div>
               <h3 className="font-semibold mb-2">Baños Completos</h3>
               <p className="text-sm text-gray-600">Baños privados con ducha, inodoro, bidé y todas las comodidades</p>
@@ -200,7 +200,7 @@ ${room.features.map((feature) => `• ${feature}`).join("\n")}
           <Card>
             <CardContent className="p-6 text-center">
               <div className="relative h-32 mb-4 rounded-lg overflow-hidden">
-                <Image src="/images/calefaccion.jpg" alt="Sistema de calefacción" fill className="object-cover" />
+                <Image src="/images/calefaccion.webp" alt="Sistema de calefacción" fill className="object-cover" />
               </div>
               <h3 className="font-semibold mb-2">Climatización</h3>
               <p className="text-sm text-gray-600">Sistema de calefacción y ventilación para tu comodidad</p>

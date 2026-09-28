@@ -7,8 +7,6 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?logo=tailwindcss&logoColor=white)
 
-🌐 **Sitio en producción / Live site:** [hotelcasadeemaus.com](https://hotelcasadeemaus.com)
-
 ---
 
 ## Español
@@ -46,7 +44,7 @@ components/
   seo-content.tsx       # contenido y FAQ para SEO
   whatsapp-float.tsx    # botón flotante de WhatsApp
   ui/                   # componentes shadcn/ui
-hooks/                  # use-in-view, use-mobile, use-touch-device
+hooks/                  # use-in-view, use-touch-device
 public/                 # imágenes, robots.txt, sitemap.xml
 ```
 
@@ -75,6 +73,7 @@ npm run lint       # ESLint
 - Habitaciones, precios y capacidad: arreglo de habitaciones en `components/rooms-section.tsx`.
 - Número de WhatsApp de destino: `components/reservation-form.tsx` y `components/whatsapp-float.tsx`.
 - Textos SEO y metadatos: `app/layout.tsx` y `components/seo-content.tsx`.
+- Imágenes: `public/images/`, en WebP (calidad ~80, sin EXIF). Las del slider van a 1600 px y las de habitaciones y servicios a 900×1200. `fachada.jpg`, `recepcion.jpg` y `habitacion-doble-1.jpg` se mantienen en JPEG para Open Graph y el sitemap.
 
 ---
 
@@ -125,6 +124,7 @@ npm run lint       # ESLint
 - Rooms, rates and capacity: the rooms array in `components/rooms-section.tsx`.
 - Target WhatsApp number: `components/reservation-form.tsx` and `components/whatsapp-float.tsx`.
 - SEO copy and metadata: `app/layout.tsx` and `components/seo-content.tsx`.
+- Images: `public/images/`, as WebP (quality ~80, no EXIF). Slider images are 1600 px, room and amenity images 900×1200. `fachada.jpg`, `recepcion.jpg` and `habitacion-doble-1.jpg` stay as JPEG for Open Graph and the sitemap.
 
 ---
 

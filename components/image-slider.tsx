@@ -10,43 +10,37 @@ import Image from "next/image"
 
 const images = [
   {
-    src: "/images/fachada.jpg",
+    src: "/images/fachada.webp",
     alt: "Fachada del Hotel Casa de Emaús",
     title: "Bienvenidos a Casa de Emaús",
     subtitle: "Tu hogar lejos de casa en el corazón de Salta",
   },
   {
-    src: "/images/recepcion.jpg",
+    src: "/images/recepcion.webp",
     alt: "Recepción del hotel",
     title: "Recepción",
     subtitle: "Atención personalizada las 24 horas",
   },
   {
-    src: "/images/lobby.jpg",
+    src: "/images/lobby.webp",
     alt: "Lobby y área de descanso",
     title: "Lobby",
     subtitle: "Espacios cómodos para tu descanso",
   },
   {
-    src: "/images/comedor-1.jpg",
+    src: "/images/comedor-1.webp",
     alt: "Comedor principal",
     title: "Comedor",
     subtitle: "Disfruta de nuestro delicioso desayuno",
   },
   {
-    src: "/images/comedor-2.jpg",
+    src: "/images/comedor-2.webp",
     alt: "Vista del comedor",
     title: "Área de comedor",
     subtitle: "Ambiente acogedor y familiar",
   },
   {
-    src: "/images/comedor-3.jpg",
-    alt: "Comedor con techo de cristal",
-    title: "Comedor con luz natural",
-    subtitle: "Hermoso techo de cristal con vista al cielo",
-  },
-  {
-    src: "/images/jardin.jpg",
+    src: "/images/jardin.webp",
     alt: "Jardín de Santa Faustina",
     title: "Jardín de Santa Faustina",
     subtitle: "Un oasis de paz en el centro de la ciudad",

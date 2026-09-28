@@ -9,10 +9,10 @@ interface UseInViewOptions {
   triggerOnce?: boolean
 }
 
-export function useInView(options: UseInViewOptions = {}) {
+export function useInView<T extends HTMLElement = HTMLElement>(options: UseInViewOptions = {}) {
   const [isInView, setIsInView] = useState(false)
   const [hasBeenInView, setHasBeenInView] = useState(false)
-  const ref = useRef<HTMLElement>(null)
+  const ref = useRef<T>(null)
   const { shouldReduceAnimations, isMobile } = useTouchDevice()
 
   const {

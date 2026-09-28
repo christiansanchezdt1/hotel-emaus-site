@@ -12,7 +12,7 @@ interface ScrollAnimationProps {
 }
 
 export function ScrollAnimation({ children, animation = "fade-up", delay = 0, className = "" }: ScrollAnimationProps) {
-  const { ref, isInView, shouldReduceAnimations } = useInView({ threshold: 0.1, triggerOnce: true })
+  const { ref, isInView, shouldReduceAnimations } = useInView<HTMLDivElement>({ threshold: 0.1, triggerOnce: true })
   const { isMobile, isTouchDevice } = useTouchDevice()
 
   const getAnimationClasses = () => {
